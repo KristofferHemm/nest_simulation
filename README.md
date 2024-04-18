@@ -1,5 +1,5 @@
 # nest_simulation
-How to simulate neural networks using NEST simulator, optimized for running many small simulations in parrallel on a single compute node on the JUSUF supercomputer at Jülich Research Center.
+How to simulate neural networks using NEST simulator, optimized for running many small simulations in parallel on a single compute node on the JUSUF supercomputer at Jülich Research Center.
 
 Dependencies
 NEST simulator installed on either Linux or Mac.
