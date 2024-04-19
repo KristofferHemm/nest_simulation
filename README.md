@@ -47,4 +47,9 @@ tau_syn_ex  # synaptic time constant in ms for excitatory neurons
 tau_syn_in  # synaptic time constant in ms for inhibitory neurons
 ```
 
-For running simulations on a supercomputer, such as JUSUF, us run.slurm
+For reproducibility, do not use random seeds, but set seeds in the input parameters.
+```
+seed
+```
+
+For running simulations on a supercomputer, such as JUSUF, use run.slurm
