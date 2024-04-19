@@ -20,7 +20,7 @@ scipy
 ```
 
 ## Usage
-For running simulations on your local computer, use run.py to run the simulations. \n
+For running simulations on your local computer, use run.py to run the simulations.\
 The parameter settings for your simulation must be provided by a csv-file, params.csv.
 params.py is provided as an example for making a csv-file that includes the parameters for a set of simulations.
 
