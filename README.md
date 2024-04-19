@@ -28,10 +28,10 @@ The parameters common to vary include:
 
 The network parameters
 ```
-g        # ratio inhibitory weight/excitatory weight
-eta      # external rate relative to threshold rate
-epsilon  # connection probability
-order    # determines the size of the network
+g           # ratio inhibitory weight/excitatory weight
+eta         # external rate relative to threshold rate
+epsilon     # connection probability
+order       # determines the size of the network
 ```
 
 The neuron parameters
