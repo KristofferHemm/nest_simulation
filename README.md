@@ -20,11 +20,11 @@ scipy
 ```
 
 ## Usage
-For running simulations on your local computer, use run.py to run the simulation.
+For running simulations on your local computer, use run.py to run the simulations.
 The parameter settings for your simulation must be provided by a csv-file, params.csv.
 params.py is provided as an example for making a csv-file that includes the parameters for a set of simulations.
 
-The parameters common to vary include:
+### Parameters common to vary include:
 
 The network parameters
 ```
@@ -40,16 +40,16 @@ C_m         # capacitance of membrane in in pF
 tau_m       # time constant of membrane potential in ms
 t_ref       # duration of refractory period in ms
 E_L         # resting membrane potential in mV
-V_reset     #reset potential of the membrane in mV
-V_m         #absolute lower value for the membrane potential in mV
-V_th        #spike threshold in mV
+V_reset     # reset potential of the membrane in mV
+V_m         # absolute lower value for the membrane potential in mV
+V_th        # spike threshold in mV
 tau_syn_ex  # synaptic time constant in ms for excitatory neurons
 tau_syn_in  # synaptic time constant in ms for inhibitory neurons
 ```
 
 For reproducibility, do not use random seeds, but set seeds in the input parameters.
 ```
-seed
+seed        # set seed for random number generators
 ```
 
-For running simulations on a supercomputer, such as JUSUF, use run.slurm
+For running simulations on a supercomputer, such as JUSUF, use run.slurm to run the simulations.
