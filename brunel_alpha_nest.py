@@ -1,8 +1,7 @@
 # -*- coding: utf-8 -*-
 #
-# brunel_exp_nest.py
 #
-# This file is part of NEST.
+# This file based on brunel_alpha_nest.py, which is a part of NEST.
 #
 # Copyright (C) 2004 The NEST Initiative
 #
@@ -20,7 +19,7 @@
 # along with NEST.  If not, see <http://www.gnu.org/licenses/>.
 
 """
-Random balanced network (exp synapses)
+Random balanced network (alpha synapses)
 ----------------------------------------
 
 This script simulates an excitatory and an inhibitory population on
@@ -42,7 +41,7 @@ References
 """
 
 ###############################################################################
-# Import all necessary modules for simulation, analysis and plotting.
+# Import all necessary modules 
 
 import time
 import nest
@@ -58,6 +57,7 @@ import pyarrow.parquet as pq
 
 from datetime import datetime
 
+###############################################################################
 # Load parameters
 
 params = sys.argv[1]
@@ -327,13 +327,9 @@ print(f"Simulation time   : {sim_time:.2f} s")
 
 ###############################################################################
 # Collect the data from the spike recorders into pandas dataframe
-# Transform the dataframes into a parquet table and add metadata to the table
-# Save the table as a parquet file, using the metadata as filename
-
 
 ex_events = nest.GetStatus(espikes, 'events')[0]
 in_events = nest.GetStatus(ispikes, 'events')[0]
-
 
 df_ex = pd.DataFrame(ex_events)
 df_ex.columns = ['senders_ex', 'times_ex']
@@ -341,6 +337,11 @@ df_in = pd.DataFrame(in_events)
 df_in.columns = ['senders_in', 'times_in']
 df_temp = [df_ex, df_in]
 df = pd.concat(df_temp, axis=1)
+
+###############################################################################
+# Transform the dataframes into a parquet table and add metadata to the table
+# Save the table as a parquet file, using the metadata as filename
+
 table = pa.Table.from_pandas(df)
 meta_content = {"tauSyn":new_tauSyn, "tauMem":new_tauMem, "theta":new_theta, "seed": new_seed}  
 meta_key = "attributes"
