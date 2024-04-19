@@ -52,7 +52,7 @@ For reproducibility, do not use random seeds, but set seeds in the input paramet
 seed        # set seed for random number generators
 ```
 
-brunel_alpha_nest.py is the script for running a single simulation. The parameters for a single simulation can be entered directly into the script. The running the script will return the results of the simulation as a parquet file.\
+brunel_alpha_nest.py is the script for running a single simulation. The parameters for a single simulation can be entered directly into the script. Running the script will return the results of the simulation as a parquet file.\
 If you want to run several simulations using different sets of parameters, use run.py to run the simulation and provide  params.csv to input the sets of parameters.
 
 For running simulations on a supercomputer, such as JUSUF, make sure to use run_kt.slurm to run the simulations. \
